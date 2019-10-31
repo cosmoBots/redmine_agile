@@ -24,7 +24,7 @@ module RedmineAgile
       def self.included(base)
         base.class_eval do
           unloadable
-          acts_as_colored
+#          acts_as_colored
           safe_attributes 'agile_color_attributes',
             :if => lambda { |project, user| user.allowed_to?(:edit_project, project) && user.allowed_to?(:view_agile_queries, project) && RedmineAgile.use_colors? }
         end

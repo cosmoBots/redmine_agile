@@ -24,7 +24,7 @@ module RedmineAgile
       def self.included(base)
         base.class_eval do
           unloadable
-          acts_as_colored
+#          acts_as_colored
           safe_attributes 'agile_color_attributes',
             :if => lambda { |user, current_user| (current_user.admin? || (user.new_record? && current_user.anonymous? && Setting.self_registration?)) && RedmineAgile.use_colors? }
         end
