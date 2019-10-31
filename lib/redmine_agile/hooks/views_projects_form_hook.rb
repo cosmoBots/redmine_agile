@@ -20,7 +20,7 @@
 module RedmineAgile
   module Hooks
     class ViewsProjectsForm < Redmine::Hook::ViewListener
-      render_on :view_projects_form, :partial => "projects/project_color_form"
+#      render_on :view_projects_form, :partial => "projects/project_color_form"
     end
   end
 end
